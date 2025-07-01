@@ -1,0 +1,104 @@
+// Basic Flexbox
+@mixin flexbox(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+// Center content horizontally & vertically
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Grid
+@mixin grid($columns: 1fr, $rows: auto, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+// Space between items horizontally
+@mixin flex-space-between($align: center) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align;
+}
+
+//Clearfix for floats
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// shadow
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+  }
+}
+
+// Mixin for :last-child
+@mixin last-child($styles...) {
+  &:last-child {
+    @content;
+  }
+}
+
+// Mixin for :first-child
+@mixin first-child($styles...) {
+  &:first-child {
+    @content;
+  }
+}
+
+// Mixin for nth-child
+@mixin nth-child($n) {
+  &:nth-child(#{$n}) {
+    @content;
+  }
+}
+
+// Mixin for nth-last-child
+@mixin nth-last-child($n) {
+  &:nth-last-child(#{$n}) {
+    @content;
+  }
+}
+
+// Mixin for odd/even
+@mixin nth-child-odd {
+  &:nth-child(odd) {
+    @content;
+  }
+}
+
+@mixin nth-child-even {
+  &:nth-child(even) {
+    @content;
+  }
+}

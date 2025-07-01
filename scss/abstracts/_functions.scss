@@ -1,0 +1,4 @@
+// _functions.scss
+@function spacing($multiplier) {
+  @return $multiplier * 0.25rem;
+}
