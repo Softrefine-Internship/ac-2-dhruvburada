@@ -2,3 +2,8 @@
 @function spacing($multiplier) {
   @return $multiplier * 0.25rem;
 }
+
+/// Converts px to rem assuming 16px base
+@function rem($px, $base: 16) {
+  @return ($px / $base) * 1rem;
+}

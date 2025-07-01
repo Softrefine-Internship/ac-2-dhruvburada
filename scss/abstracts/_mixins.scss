@@ -45,6 +45,11 @@
   }
 }
 
+//font sizes
+@mixin font($size-key) {
+  font-size: map-get($font-scale, $size-key);
+}
+
 @mixin respond($breakpoint) {
   @media (max-width: map-get($breakpoints, $breakpoint)) {
     @content;
@@ -101,4 +106,42 @@
   &:nth-child(even) {
     @content;
   }
+}
+
+/// Mixin to style avatar containers
+/// @param $size: Size of avatar image (e.g., 2rem)
+/// @param $overlap: If true, avatars overlap each other
+/// @param $border-color: Color of avatar border
+@mixin avatar-container($size: 2rem, $overlap: false, $border-color: #fff) {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $border-color;
+
+    @if $overlap {
+      margin-left: -($size / 3);
+      &:first-child {
+        margin-left: 0;
+      }
+    } @else {
+      margin-left: 0.25rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@mixin filled-dot($size: 0.5rem, $color: #10b981) {
+  content: "";
+  display: inline-block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
 }
