@@ -1,0 +1,53 @@
+.sidebar {
+  grid-column: 2/3;
+
+  background-color: $light-bg;
+
+  // &-heading::after {
+  //   @include section-divider-after(rem(17), rem(-32), rem(-10));
+  // }
+  .brand-container {
+    width: 100%;
+    border-bottom: solid 1px $gray;
+    padding: 0rem 1rem;
+    padding-bottom: 0.6rem;
+    padding-top: 1.69rem;
+    line-height: 1.5rem;
+
+    .brand-title {
+      min-width: 220px;
+    }
+
+    .brand-subtitle {
+      font-size: map-get($map: $font-scale, $key: sm);
+      min-width: 250px;
+    }
+  }
+
+  .menu {
+    margin-top: 2rem;
+    padding: 0rem 2rem;
+    @include flexbox(column, flex-start, flex-start, nowrap, 1.2rem);
+    &-item {
+      font-weight: 600;
+      font-size: map-get($map: $font-scale, $key: base);
+      @include flex-space-between();
+      width: 100%;
+    }
+
+    .icon-right {
+      display: flex;
+      justify-content: space-between;
+      height: 24px;
+      width: 22px;
+    }
+  }
+
+  .projects-sublist,
+  .tasks-sublist {
+    padding-left: 1rem;
+  }
+  .sublist-item {
+    color: rgb(53, 52, 52);
+  }
+}

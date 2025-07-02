@@ -1,0 +1,41 @@
+.card-container {
+  @include flex-center(3%);
+  margin-top: 1rem;
+}
+
+.card {
+  padding: rem(24);
+  border-radius: 18px;
+  height: rem(360);
+  width: 100%;
+  margin-bottom: 1rem;
+  @include flexbox(column, flex-start, flex-start, nowrap);
+
+  &-header {
+    @include flex-space-between;
+    margin-bottom: 25px;
+    width: 100%;
+    & .options {
+      font-size: map-get($map: $font-scale, $key: "2xl");
+      font-weight: 600;
+    }
+  }
+
+  &-title {
+    font-size: map-get($map: $font-scale, $key: "xl");
+    margin-bottom: 12px;
+  }
+
+  &.peach {
+    background-color: $peach;
+  }
+
+  &.yellow {
+    background-color: $yellow;
+  }
+
+  .progress-container {
+    margin-top: auto;
+    margin-bottom: 0.829rem;
+  }
+}

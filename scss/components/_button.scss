@@ -1,0 +1,36 @@
+.btn-secondary {
+  border: 1px dashed #f1b58b;
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #222;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #f1b58b20;
+  }
+}
+
+.btn-primary {
+  background-color: $orange;
+  color: $white;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 0.9rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: darken($color: $orange, $amount: 10);
+  }
+}
+
+.btn-bell {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $black;
+  font-size: map-get($map: $font-scale, $key: xl);
+}

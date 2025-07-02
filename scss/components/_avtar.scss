@@ -1,0 +1,15 @@
+.avtar {
+  height: rem(30);
+  width: rem(30);
+  border-radius: 50%;
+
+  &.md {
+    height: rem(40);
+    width: rem(40);
+  }
+
+  &.big {
+    height: rem(50);
+    width: rem(50);
+  }
+}

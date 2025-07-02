@@ -1,0 +1,19 @@
+.count {
+  height: rem(50);
+  width: rem(50);
+  background-color: $black;
+  color: $white;
+  border-radius: 50%;
+  z-index: 100;
+  @include flex-center;
+
+  &.peach {
+    border: 3px solid $peach;
+  }
+
+  &.yellow {
+    border: 2px solid $black;
+    color: $black;
+    background-color: $yellow;
+  }
+}

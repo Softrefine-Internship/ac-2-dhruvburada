@@ -1,0 +1,40 @@
+.emp-section {
+  grid-column: 9/-1;
+  padding: 1rem 2rem;
+}
+
+.emp-header {
+  @include flex-space-between;
+  margin-top: rem(21);
+  margin-bottom: 3rem;
+
+  &-right {
+    @include flex-center(rem(20));
+  }
+
+  .profile-container {
+    @include flex-center(rem(20));
+  }
+}
+
+.team-heading {
+  margin-bottom: 1rem;
+}
+
+.team-member-container {
+  @include avatar-container(rem(50), false, none);
+}
+
+.project-stats-container {
+  @include flex-space-between;
+  max-width: 600px;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  border: #eee8e1 1px solid;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.tasks-header {
+  @include flex-space-between;
+}

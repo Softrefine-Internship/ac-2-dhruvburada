@@ -2,6 +2,14 @@ body {
   font-family: $font-base;
   font-size: $font-size-base;
   line-height: 1.6;
-  color: $black;
-  background: $peach;
+}
+
+[class$="-heading"] {
+  font-size: map-get($map: $font-scale, $key: base) + 0.2rem;
+  font-weight: 700;
+}
+
+.link {
+  color: $orange;
+  font-weight: 600;
 }

@@ -15,14 +15,16 @@
 }
 
 // Center content horizontally & vertically
-@mixin flex-center {
+@mixin flex-center($gap: 0px, $dir: row) {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: $gap;
+  flex-direction: $dir;
 }
 
 //Grid
-@mixin grid($columns: 1fr, $rows: auto, $gap: 1rem) {
+@mixin grid($columns: 1fr, $rows: auto, $gap: 0rem) {
   display: grid;
   grid-template-columns: $columns;
   grid-template-rows: $rows;
@@ -114,15 +116,20 @@
 /// @param $overlap: If true, avatars overlap each other
 /// @param $border-color: Color of avatar border
 @mixin avatar-container($size: 2rem, $overlap: false, $border-color: #fff) {
+  max-width: 600px;
   display: flex;
   align-items: center;
 
-  .avatar {
+  @if (not $overlap) {
+    justify-content: space-evenly;
+  }
+
+  .avtar {
     width: $size;
     height: $size;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid $border-color;
+    border: 3px solid $border-color;
 
     @if $overlap {
       margin-left: -($size / 3);
@@ -145,4 +152,27 @@
   height: $size;
   border-radius: 50%;
   background-color: $color;
+}
+
+/// Adds a horizontal divider line *after* the element visually
+/// @param {Length} $margin-top - Space above the line (e.g., 1rem)
+/// @param {Length} $offset-left - Extra width to the left (e.g., -2rem)
+/// @param {Length} $offset-right - Extra width to the right (e.g., -2rem)
+/// @param {Color} $color - The divider color
+/// @param {Length} $height - Thickness of the divider
+@mixin section-divider-after(
+  $margin-top: 1rem,
+  $offset-left: 0,
+  $offset-right: 0,
+  $color: $gray,
+  $height: 1px
+) {
+  content: "";
+  display: block;
+  position: relative;
+  height: $height;
+  background-color: $color;
+  margin-top: $margin-top;
+  margin-left: $offset-left;
+  margin-right: $offset-right;
 }

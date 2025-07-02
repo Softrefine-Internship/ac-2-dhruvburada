@@ -1,0 +1,33 @@
+.reminders {
+  &-container {
+    padding: 1rem 2rem;
+    border: 1px solid #eee8e1;
+    border-radius: 2rem;
+  }
+
+  &-section {
+    @include flex-space-between;
+  }
+
+  &-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &-card {
+    border: 1px solid #f1e8e0;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &-title {
+    font-size: map-get($map: $font-scale, $key: lg);
+    font-weight: 600;
+    max-width: 300px;
+    color: #222;
+  }
+}

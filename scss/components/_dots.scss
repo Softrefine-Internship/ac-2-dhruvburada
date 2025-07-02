@@ -1,0 +1,27 @@
+.dots-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+
+  &.big {
+    justify-content: flex-end;
+  }
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: $orange;
+  border-radius: 50%;
+  opacity: 0.5;
+
+  &.big {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.dot:first-child {
+  opacity: 1;
+}

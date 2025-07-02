@@ -10,7 +10,15 @@
 
 // Layout
 @import "layouts/nav";
+@import "layouts/sidebar";
+@import "layouts/main-section";
+@import "layouts/emp-section";
 
 // Components
-
-// Pages
+@import "components/card";
+@import "components/avtar";
+@import "components/count";
+@import "components/progress";
+@import "components/reminder";
+@import "components/button";
+@import "components/dots"; // Pages
