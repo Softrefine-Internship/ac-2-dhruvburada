@@ -15,7 +15,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -809,7 +809,7 @@ ul {
   color: #222;
 }
 .progress-bar {
-  background: #e0b29d; /* Light background color similar to your image */
+  background-color: rgba(128, 128, 128, 0.3803921569); /* Light background color similar to your image */
   height: 8px;
   border-radius: 4px;
   overflow: hidden;
