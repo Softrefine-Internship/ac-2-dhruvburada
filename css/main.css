@@ -94,9 +94,6 @@ ul {
   background-position: 50% 50%;
   border-bottom: solid 1px #9d9d9d;
 }
-.nav .logo .logo-text {
-  font-weight: 800;
-}
 @media (max-width: 992px) {
   .nav .logo {
     height: 3.125rem;
