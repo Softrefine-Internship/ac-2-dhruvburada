@@ -55,4 +55,8 @@
     color: rgb(53, 52, 52);
     cursor: pointer;
   }
+
+  .sublist-item:last-child {
+    font-weight: 600;
+  }
 }
