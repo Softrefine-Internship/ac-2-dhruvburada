@@ -186,6 +186,24 @@ ul {
     font-size: 1.25rem;
   }
 }
+.btn-bell {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+  width: 8px;
+  height: 8px;
+  background-color: #f0894d;
+  border-radius: 50%;
+}
+
 .sidebar {
   grid-column: 2/3;
   background-color: #f2ece2;
@@ -228,6 +246,7 @@ ul {
   align-items: center;
   flex-direction: row;
   width: 100%;
+  cursor: pointer;
 }
 .sidebar .menu .icon-right {
   display: flex;
@@ -241,6 +260,7 @@ ul {
 }
 .sidebar .sublist-item {
   color: rgb(53, 52, 52);
+  cursor: pointer;
 }
 
 .main-section {
@@ -375,6 +395,9 @@ ul {
     display: none;
   }
 }
+.emp-header-right > * {
+  cursor: pointer;
+}
 .emp-header .profile-container {
   display: flex;
   justify-content: center;
@@ -410,6 +433,11 @@ ul {
 }
 .team-member-container .avtar:first-child {
   margin-left: 0;
+}
+@media (max-width: 992px) {
+  .team-member-container {
+    margin: 0 auto;
+  }
 }
 
 .project-stats-container {
@@ -517,6 +545,7 @@ ul {
 .card-header .options {
   font-size: 2rem;
   font-weight: 600;
+  cursor: pointer;
 }
 .card .card-title {
   font-size: 1.5rem;
@@ -565,6 +594,7 @@ ul {
 
 /* Base Task Card */
 .task-card {
+  cursor: pointer;
   background: #fff;
   border-radius: 1rem;
   padding: 1rem 1.5rem;
@@ -880,6 +910,7 @@ ul {
 .dot {
   width: 6px;
   height: 6px;
+  cursor: pointer;
   background: #f0894d;
   border-radius: 50%;
   opacity: 0.5;

@@ -18,6 +18,7 @@
     & .options {
       font-size: map-get($map: $font-scale, $key: "2xl");
       font-weight: 600;
+      cursor: pointer;
     }
   }
 
@@ -96,6 +97,7 @@
 
 /* Base Task Card */
 .task-card {
+  cursor: pointer;
   background: #fff;
   border-radius: 1rem;
   padding: 1rem 1.5rem;

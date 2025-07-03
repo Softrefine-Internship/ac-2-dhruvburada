@@ -36,6 +36,7 @@
       font-size: map-get($map: $font-scale, $key: base);
       @include flex-space-between();
       width: 100%;
+      cursor: pointer;
     }
 
     .icon-right {
@@ -52,5 +53,6 @@
   }
   .sublist-item {
     color: rgb(53, 52, 52);
+    cursor: pointer;
   }
 }
