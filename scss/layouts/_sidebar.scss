@@ -21,6 +21,9 @@
       min-width: 220px;
     }
 
+    .logo-text {
+      font-weight: 800;
+    }
     .brand-subtitle {
       font-size: map-get($map: $font-scale, $key: sm);
       min-width: 250px;
