@@ -520,6 +520,11 @@ ul {
   flex-direction: row;
   margin-top: 1rem;
 }
+@media (max-width: 576px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
 
 .card {
   padding: 1.5rem;
