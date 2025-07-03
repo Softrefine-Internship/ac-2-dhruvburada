@@ -15,7 +15,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -87,7 +87,7 @@ ul {
 .nav .logo {
   height: 4.375rem;
   width: 100%;
-  background: url("../../assets/images/image-removebg-preview.png");
+  background: url("../assets/images/image-removebg-preview.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
