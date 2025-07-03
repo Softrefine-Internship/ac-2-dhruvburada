@@ -2,14 +2,20 @@
   grid-column: 1/2;
   @include flex-space-between(center, column);
   position: relative;
-  height: 100vh;
   width: 100%;
   background: $white;
-
-  padding: 1rem 0;
+  height: 100vh;
+  padding-top: 1rem;
   gap: 1rem;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Stay on top */
+
+  @include respond(lg) {
+    display: flex;
+    flex-direction: row;
+    padding: rem(12) rem(12);
+    height: 70px;
+  }
 
   & .logo {
     height: rem(70);
@@ -23,11 +29,25 @@
     // &::after {
     //   @include section-divider-after(rem(80), -1rem, rem(-21));
     // }
+
+    @include respond(lg) {
+      height: rem(50);
+      width: rem(50);
+      border-bottom: none;
+    }
   }
 
   &-items {
     @include flex-center(rem(0), column);
     width: 100%;
+
+    @include respond(lg) {
+      flex-direction: row;
+      position: fixed;
+      bottom: 0px;
+      background-color: $white;
+      position: fixed;
+    }
   }
 
   &-btn {
@@ -52,6 +72,12 @@
       background-color: $black;
       border-radius: 50%;
       color: $white;
+
+      @include respond(lg) {
+        position: fixed;
+        bottom: 70px;
+        right: 21px;
+      }
     }
 
     & svg {
@@ -60,5 +86,39 @@
       color: $black;
       stroke-width: 0.5;
     }
+  }
+}
+
+.user-profile-nav {
+  display: none;
+}
+
+@media (max-width: 998px) {
+  .user-profile-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    flex-direction: row;
+
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      flex-direction: row;
+    }
+
+    & .user-name {
+      font-weight: 600;
+    }
+
+    .btn-bell {
+      font-size: map-get($map: $font-scale, $key: lg);
+    }
+  }
+
+  .btn-bell {
+    font-size: map-get($map: $font-scale, $key: lg);
   }
 }

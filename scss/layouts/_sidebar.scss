@@ -1,4 +1,7 @@
 .sidebar {
+  @include respond(xl) {
+    display: none;
+  }
   grid-column: 2/3;
 
   background-color: $light-bg;

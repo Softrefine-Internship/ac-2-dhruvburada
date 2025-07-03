@@ -131,6 +131,20 @@
         </div>
       </div>
 
+      <div class="user-profile-nav">
+        <button class="btn-bell">
+          <i class="fa-regular fa-bell"></i>
+        </button>
+        <div class="profile-container">
+          <img src="./assets/images/person-5.jpg" alt="" class="avtar md" />
+          <div>
+            <p class="user-role">User</p>
+            <p class="user-name">Maria</p>
+          </div>
+          <div class="more-icon"></div>
+        </div>
+      </div>
+
       <div class="nav-btn help">?</div>
     </nav>
 
@@ -337,7 +351,7 @@
         <div class="team-member-container">
           <img src="/assets/images/person-1.jpeg" alt="" class="avtar big" />
           <img src="/assets/images/person-2.jpeg" alt="" class="avtar big" />
-          <img src="/assets/images/person-3.jpeg" alt="" class="avtar big" />
+          <div class="avtar-unknown">JR</div>
           <img src="/assets/images/person-4.jpeg" alt="" class="avtar big" />
           <img src="/assets/images/person-5.jpg" alt="" class="avtar big" />
           <div class="plus">+</div>
@@ -361,53 +375,45 @@
 
       <div class="daily-tasks-container">
         <div class="tasks-header">
-          <h2 class="tasks-heading">Daily Tasks (3)</h2>
-          <a href="" class="link">Edit</a>
+          <h2 class="tasks-heading">Daily tasks (3)</h2>
+          <a href="#" class="link">Edit</a>
         </div>
 
-        <div class="task-col-1">
-          <!-- Task Card 1 -->
-          <div class="tasks-container">
-            <div class="task-card">
-              <h3>Add New</h3>
-              <div class="add-icon">+</div>
-            </div>
-
-            <!-- Task Card 2 -->
-            <div class="task-card">
-              <div class="task-card-header">
-                <div class="dot"></div>
-                <p class="task-status">New</p>
-                <input
-                  type="checkbox"
-                  name="task-checkbox"
-                  id="task-checkbox"
-                />
-              </div>
-              <h3 class="card-title">Change color palette to more bright</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="task-col-2">
-          <!-- Task Card 3 -->
-          <div class="task-card">
-            <div class="task-card-header">
-              <div class="dot"></div>
-              <p class="task-status">In Progress</p>
-              <input type="checkbox" name="task-checkbox" id="task-checkbox" />
-            </div>
-            <h3 class="card-title">Make prototype for mobile version</h3>
+        <div class="tasks-grid">
+          <!-- Add New Card -->
+          <div class="task-card add-new">
+            <h3 class="card-title">Add new</h3>
+            <div class="add-icon">+</div>
           </div>
 
-          <div class="task-col-2"></div>
-          <!-- Task Card 4 -->
-          <div class="task-card">
+          <!-- New Task Card -->
+          <div class="task-card svg-background">
             <div class="task-card-header">
-              <div class="dot"></div>
+              <div class="dot red"></div>
+              <p class="task-status">New</p>
+              <input type="checkbox" class="progress-checkbox" />
+            </div>
+            <h3 class="card-title">Change color palette to more bright</h3>
+          </div>
+
+          <!-- In Progress Task Card -->
+          <div class="task-card progress svg-background-2">
+            <div class="task-card-header">
+              <div class="dot green"></div>
+              <p class="task-status">In progress</p>
+              <input type="checkbox" class="progress-checkbox" />
+            </div>
+            <h3 class="card-title progress">
+              Make prototype for mobile version
+            </h3>
+          </div>
+
+          <!-- Done Task Card -->
+          <div class="task-card done svg-background-3">
+            <div class="task-card-header">
+              <div class="dot white"></div>
               <p class="task-status">Done</p>
-
-              <input type="checkbox" name="task-checkbox" id="task-checkbox" />
+              <input type="checkbox" class="progress-checkbox" />
             </div>
             <h3 class="card-title">Make fixes in homepage</h3>
           </div>

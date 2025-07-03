@@ -1,6 +1,16 @@
 .emp-section {
   grid-column: 9/-1;
   padding: 1rem 2rem;
+  box-shadow: -10px 0 10px -10px rgba(157, 157, 157, 0.4);
+
+  @include respond(xl) {
+    grid-column: 8/-1;
+  }
+
+  @include respond(lg) {
+    grid-column: 1/2;
+    margin-bottom: 100px;
+  }
 }
 
 .emp-header {
@@ -10,10 +20,23 @@
 
   &-right {
     @include flex-center(rem(20));
+
+    @include respond(lg) {
+      display: none;
+    }
   }
 
   .profile-container {
     @include flex-center(rem(20));
+  }
+
+  .user-role {
+    color: gray;
+  }
+
+  .user-name {
+    font-weight: 600;
+    color: $black;
   }
 }
 
@@ -33,8 +56,50 @@
   margin: 2rem auto;
   border: #eee8e1 1px solid;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @include respond(xxl) {
+    padding: 0.5rem 1rem;
+  }
 }
 
+.plus {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 2px dashed $orange;
+  border-radius: 1.5rem;
+  font-size: map-get($map: $font-scale, $key: "xl");
+  background: #f1b68b59;
+  color: $orange;
+  cursor: pointer;
+  @include flex-center;
+  transition: all 0.3s ease;
+  aspect-ratio: 1;
+}
+
+.project-stat-tagline {
+  font-size: map-get($map: $font-scale, $key: sm);
+  color: rgb(88, 88, 88);
+}
+
+.project-stat-text {
+  font-size: map-get($map: $font-scale, $key: lg);
+
+  @include respond(xxl) {
+    font-size: 1rem;
+  }
+}
 .tasks-header {
   @include flex-space-between;
+  margin-bottom: 1rem;
+}
+
+.task-col-1,
+.task-col-2 {
+  @include flex-space-between;
+  gap: 3%;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }

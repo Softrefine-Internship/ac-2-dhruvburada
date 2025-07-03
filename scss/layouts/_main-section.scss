@@ -2,6 +2,14 @@
   grid-column: 3/9;
   padding: 1rem 2rem;
   background-color: $white;
+
+  @include respond(xl) {
+    grid-column: 2/8;
+  }
+
+  @include respond(lg) {
+    grid-column: 1/2;
+  }
 }
 
 .today-date {

@@ -6,7 +6,7 @@
 .card {
   padding: rem(24);
   border-radius: 18px;
-  height: rem(360);
+  height: 25.5rem;
   width: 100%;
   margin-bottom: 1rem;
   @include flexbox(column, flex-start, flex-start, nowrap);
@@ -21,9 +21,10 @@
     }
   }
 
-  &-title {
+  & &-title {
     font-size: map-get($map: $font-scale, $key: "xl");
     margin-bottom: 12px;
+    font-weight: 800;
   }
 
   &.peach {
@@ -38,4 +39,216 @@
     margin-top: auto;
     margin-bottom: 0.829rem;
   }
+}
+
+// .task-card {
+//   border: solid 1px $black;
+//   width: 100%;
+//   border-radius: 1.2rem;
+//   padding: 1rem 2rem;
+//   min-height: 9.5rem;
+
+//   & .card-title {
+//     font-size: map-get($map: $font-scale, $key: lg);
+//     font-weight: 500;
+//   }
+
+//   & &-header {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     gap: 0.5rem;
+//   }
+
+//   & .add-icon {
+//     font-size: map-get($map: $font-scale, $key: "2xl");
+//   }
+// }
+
+.daily-tasks-container {
+  margin: 0 auto;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tasks-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: #f38b51;
+  text-decoration: none;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Base Task Card */
+.task-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Add New Card Style */
+.task-card.add-new {
+  background: #f5eee6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.add-icon {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Task Card Header */
+.task-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: flex-end;
+}
+
+.task-status {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Dots for status */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background: #ff6b6b;
+}
+
+.dot.green {
+  background: #06b6d4;
+}
+
+.dot.white {
+  background: white;
+  border: 1px solid #fff;
+}
+
+/* Done Card Style */
+.task-card.done {
+  background: #f38b51;
+  color: white;
+}
+
+.task-card.done .task-status {
+  color: white;
+}
+
+.task-card.done .card-title {
+  color: white;
+}
+
+.task-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  z-index: 2;
+  position: relative;
+
+  &.progress {
+    font-weight: 500;
+  }
+}
+
+.svg-background::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: url(/assets/images/lines.svg);
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  opacity: 0.6;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.svg-background-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: url(/assets/images/box.svg);
+  z-index: 1;
+  opacity: 0.6;
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.svg-background-3::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: url(/assets/images/circle.svg);
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.progress-checkbox {
+  width: 13px;
+  height: 13px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid $orange;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.progress-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  width: 5px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.progress-checkbox:checked {
+  background-color: $black;
+  border: 1px solid $black;
+  accent-color: $white;
 }

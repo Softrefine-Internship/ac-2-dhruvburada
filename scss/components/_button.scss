@@ -11,6 +11,10 @@
   &:hover {
     background: #f1b58b20;
   }
+
+  @media (max-width: 1250px) {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 .btn-primary {
@@ -24,6 +28,10 @@
   transition: all 0.3s ease;
   &:hover {
     background-color: darken($color: $orange, $amount: 10);
+  }
+
+  @include respond(xl) {
+    padding: 0.5rem 1rem;
   }
 }
 

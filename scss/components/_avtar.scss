@@ -12,4 +12,15 @@
     height: rem(50);
     width: rem(50);
   }
+
+  &-unknown {
+    height: rem(50);
+    width: rem(50);
+    @include flex-center;
+    font-size: map-get($map: $font-scale, $key: lg);
+    color: $orange;
+    background-color: rgba(241, 182, 139, 0.3490196078);
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
 }
