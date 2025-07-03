@@ -22,7 +22,7 @@
     }
 
     .logo-text {
-      font-weight: 800;
+      font-weight: 600;
     }
     .brand-subtitle {
       font-size: map-get($map: $font-scale, $key: sm);
@@ -55,11 +55,35 @@
     padding-left: 1rem;
   }
   .sublist-item {
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     color: rgb(53, 52, 52);
     cursor: pointer;
+
+    &:hover {
+      transform: translateX(5px);
+      color: #000;
+    }
   }
 
   .sublist-item:last-child {
     font-weight: 600;
   }
+}
+
+.menu-group {
+  width: 100%;
+}
+
+.projects-sublist,
+.tasks-sublist {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-group:hover .projects-sublist,
+.menu-group:hover .tasks-sublist {
+  max-height: 500px; /* adjust as needed */
+  opacity: 1;
 }

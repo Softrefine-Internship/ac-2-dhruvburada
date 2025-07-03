@@ -12,8 +12,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -152,64 +154,69 @@
     <aside class="sidebar">
       <div class="brand-container">
         <h1 class="logo-text">Ziferblat</h1>
-        <p class="brand-subtitle">Team Work and Time management</p>
+        <p class="brand-subtitle">Teamwork & time management</p>
       </div>
 
       <ul class="menu">
         <li class="menu-item">
-          <span>Team</span
-          ><img
+          <span>Team</span>
+          <img
             src="./assets/icons/211607_right_arrow_icon.svg"
             alt="right"
             class="icon-right"
           />
         </li>
-        <li class="menu-item expadable">
-          <span>Projects</span
-          ><img
-            src="./assets/icons/211687_down_arrow_icon.svg"
-            alt="right"
-            class="icon-right"
-          />
+
+        <li class="menu-group">
+          <div class="menu-item expadable">
+            <span>Projects</span>
+            <img
+              src="./assets/icons/211687_down_arrow_icon.svg"
+              alt="right"
+              class="icon-right"
+            />
+          </div>
+          <!-- Project sublist -->
+          <ul class="projects-sublist">
+            <li class="sublist-item">All Projects (4)</li>
+            <li class="sublist-item">Design system</li>
+            <li class="sublist-item">Make a unique design for customer</li>
+            <li class="sublist-item">User flow</li>
+            <li class="sublist-item">UX research</li>
+            <li class="sublist-item">Add new project</li>
+          </ul>
         </li>
 
-        <!-- Project sublist -->
-        <ul class="projects-sublist">
-          <li class="sublist-item">All Projects (4)</li>
-          <li class="sublist-item">Design system</li>
-          <li class="sublist-item">Make a unqure design for customer</li>
-          <li class="sublist-item">User flow</li>
-          <li class="sublist-item">UX research</li>
-          <li class="sublist-item">Add new project</li>
-        </ul>
-        <li class="menu-item expandable">
-          <span>Tasks</span
-          ><img
-            src="./assets/icons/211687_down_arrow_icon.svg"
-            alt="right"
-            class="icon-right"
-          />
+        <li class="menu-group">
+          <div class="menu-item expandable">
+            <span>Tasks</span>
+            <img
+              src="./assets/icons/211687_down_arrow_icon.svg"
+              alt="right"
+              class="icon-right"
+            />
+          </div>
+          <!-- Task Sublist -->
+          <ul class="tasks-sublist">
+            <li class="sublist-item">All tasks (3)</li>
+            <li class="sublist-item">New (1)</li>
+            <li class="sublist-item">In progress (1)</li>
+            <li class="sublist-item">Done (1)</li>
+            <li class="sublist-item">Add new task</li>
+          </ul>
         </li>
-        <!-- Task Sublist  -->
-        <ul class="tasks-sublist">
-          <li class="sublist-item">All tasks&nbsp;(3)</li>
-          <li class="sublist-item">New (1)</li>
-          <li class="sublist-item">In progress (1)</li>
-          <li class="sublist-item">Done (1)</li>
-          <li class="sublist-item">Add new project</li>
-        </ul>
 
         <li class="menu-item">
-          <span>Reminders</span
-          ><img
+          <span>Reminders</span>
+          <img
             src="./assets/icons/211607_right_arrow_icon.svg"
             alt="right"
             class="icon-right"
           />
         </li>
         <li class="menu-item">
-          <span>Messenger</span
-          ><img
+          <span>Messenger</span>
+          <img
             src="./assets/icons/211607_right_arrow_icon.svg"
             alt="right"
             class="icon-right"
@@ -256,7 +263,7 @@
               </div>
               <div class="options">:</div>
             </div>
-            <h3 class="card-title">Design System</h3>
+            <h3 class="card-title">Design system</h3>
             <p class="card-subtitle">Deadline: 18 October</p>
             <div class="progress-container">
               <p class="progress-text">84 hours / 40%</p>

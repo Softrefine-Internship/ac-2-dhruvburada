@@ -29,11 +29,7 @@
   & &-title {
     font-size: map-get($map: $font-scale, $key: "2xl");
     margin-bottom: 12px;
-    font-weight: 800;
-
-    @include respond(lg) {
-      font-weight: 600;
-    }
+    font-weight: 600;
   }
 
   &.peach {
