@@ -87,3 +87,19 @@
   max-height: 500px; /* adjust as needed */
   opacity: 1;
 }
+
+.menu-group {
+  width: 100%;
+
+  .menu-item.expandable {
+    @include flex-space-between();
+
+    .icon-right {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .menu-item.expandable .icon-right {
+    transform: rotate(90deg); // Rotate right arrow to point downward
+  }
+}

@@ -29,6 +29,9 @@ body {
   color: #f0894d;
   font-weight: 600;
 }
+.link.edit {
+  margin-right: 4%;
+}
 
 body {
   display: grid;
@@ -114,6 +117,7 @@ ul {
     flex-direction: row;
     position: fixed;
     bottom: 0px;
+    left: 0px;
     background-color: #fcfcfc;
     position: fixed;
   }
@@ -143,12 +147,14 @@ ul {
   background-color: #111111;
   border-radius: 50%;
   color: #fcfcfc;
+  margin-bottom: 2rem;
 }
 @media (max-width: 992px) {
   .nav-btn.help {
     position: fixed;
     bottom: 70px;
     right: 21px;
+    margin-bottom: 0px;
   }
 }
 .nav-btn svg {
@@ -162,7 +168,7 @@ ul {
   display: none;
 }
 
-@media (max-width: 998px) {
+@media (max-width: 992px) {
   .user-profile-nav {
     display: flex;
     justify-content: center;
@@ -179,12 +185,27 @@ ul {
   }
   .user-profile-nav .user-name {
     font-weight: 600;
+    margin-top: -7px;
   }
   .user-profile-nav .btn-bell {
     font-size: 1.25rem;
   }
   .btn-bell {
     font-size: 1.25rem;
+  }
+  .more-icon {
+    background-color: rgba(241, 182, 139, 0.3490196078);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: row;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+  }
+  .more-icon i {
+    color: #f0894d;
   }
 }
 .btn-bell {
@@ -196,8 +217,8 @@ ul {
 
 .notification-dot {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.375rem;
+  right: 0.25rem;
   transform: translate(30%, -30%);
   width: 8px;
   height: 8px;
@@ -293,6 +314,22 @@ ul {
   opacity: 1;
 }
 
+.menu-group {
+  width: 100%;
+}
+.menu-group .menu-item.expandable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.menu-group .menu-item.expandable .icon-right {
+  transition: transform 0.3s ease;
+}
+.menu-group:hover .menu-item.expandable .icon-right {
+  transform: rotate(90deg);
+}
+
 .main-section {
   grid-column: 3/9;
   padding: 1rem 2rem;
@@ -366,7 +403,12 @@ ul {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fcbea4;
+  position: relative;
   margin-left: -1.0416666667rem;
+  z-index: 2;
+}
+.avtars-container.peach .avtar:last-child {
+  z-index: 1;
 }
 .avtars-container.peach .avtar:first-child {
   margin-left: 0;
@@ -382,7 +424,12 @@ ul {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fce6bd;
+  position: relative;
   margin-left: -1.0416666667rem;
+  z-index: 2;
+}
+.avtars-container.yellow .avtar:last-child {
+  z-index: 1;
 }
 .avtars-container.yellow .avtar:first-child {
   margin-left: 0;
@@ -410,8 +457,13 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 1.3125rem;
+  margin-top: 1.6125rem;
   margin-bottom: 3rem;
+}
+@media (max-width: 992px) {
+  .emp-header {
+    margin-bottom: 1rem;
+  }
 }
 .emp-header-right {
   display: flex;
@@ -441,6 +493,21 @@ ul {
 .emp-header .user-name {
   font-weight: 800;
   color: #111111;
+  margin-top: -7px;
+}
+.emp-header .more-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background-color: rgba(241, 182, 139, 0.3490196078);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  flex-direction: row;
+}
+.emp-header .more-icon i {
+  color: #f0894d;
 }
 
 .team-heading {
@@ -451,7 +518,7 @@ ul {
   max-width: 600px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .team-member-container .avtar {
   width: 3.125rem;
@@ -459,6 +526,7 @@ ul {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid none;
+  position: relative;
   margin-left: 0.25rem;
 }
 .team-member-container .avtar:first-child {
@@ -466,7 +534,7 @@ ul {
 }
 @media (max-width: 992px) {
   .team-member-container {
-    margin: 0 auto;
+    max-width: none;
   }
 }
 
@@ -485,6 +553,7 @@ ul {
 @media (max-width: 1400px) {
   .project-stats-container {
     padding: 0.5rem 1rem;
+    max-width: none;
   }
 }
 
@@ -526,7 +595,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 1rem;
+  margin-bottom: 0px;
 }
 
 .task-col-1,
@@ -586,6 +655,7 @@ ul {
   font-size: 2rem;
   margin-bottom: 12px;
   font-weight: 600;
+  line-height: 1.3;
 }
 .card.peach {
   background-color: #fcbea4;
@@ -793,6 +863,7 @@ ul {
   height: 1.875rem;
   width: 1.875rem;
   border-radius: 50%;
+  object-fit: cover;
 }
 .avtar.md {
   height: 2.5rem;
@@ -914,9 +985,10 @@ ul {
 
 .btn-primary {
   background-color: #f0894d;
+  margin-top: 1px;
   color: #fcfcfc;
   border: none;
-  padding: 0.7rem 2rem;
+  padding: 0.75rem 2rem;
   font-size: 0.9rem;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -928,6 +1000,11 @@ ul {
 @media (max-width: 1200px) {
   .btn-primary {
     padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 992px) {
+  .btn-primary {
+    transform: translateY(-170%);
   }
 }
 

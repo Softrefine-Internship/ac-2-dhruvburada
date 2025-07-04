@@ -45,6 +45,7 @@
       flex-direction: row;
       position: fixed;
       bottom: 0px;
+      left: 0px;
       background-color: $white;
       position: fixed;
     }
@@ -72,11 +73,13 @@
       background-color: $black;
       border-radius: 50%;
       color: $white;
+      margin-bottom: 2rem;
 
       @include respond(lg) {
         position: fixed;
         bottom: 70px;
         right: 21px;
+        margin-bottom: 0px;
       }
     }
 
@@ -93,7 +96,7 @@
   display: none;
 }
 
-@media (max-width: 998px) {
+@media (max-width: 992px) {
   .user-profile-nav {
     display: flex;
     justify-content: center;
@@ -111,6 +114,7 @@
 
     & .user-name {
       font-weight: 600;
+      margin-top: -7px;
     }
 
     .btn-bell {
@@ -120,6 +124,19 @@
 
   .btn-bell {
     font-size: map-get($map: $font-scale, $key: lg);
+  }
+
+  .more-icon {
+    background-color: rgba(241, 182, 139, 0.3490196078);
+
+    @include flex-center;
+    height: rem(20);
+    width: rem(20);
+    border-radius: 50%;
+
+    i {
+      color: $orange;
+    }
   }
 }
 
@@ -132,8 +149,8 @@
 
 .notification-dot {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: rem(6);
+  right: rem(4);
   transform: translate(30%, -30%);
   width: 8px;
   height: 8px;

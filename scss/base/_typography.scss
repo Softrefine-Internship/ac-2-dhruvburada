@@ -12,4 +12,8 @@ body {
 .link {
   color: $orange;
   font-weight: 600;
+
+  &.edit {
+    margin-right: 4%;
+  }
 }

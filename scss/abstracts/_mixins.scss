@@ -121,7 +121,7 @@
   align-items: center;
 
   @if (not $overlap) {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .avtar {
@@ -130,14 +130,25 @@
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid $border-color;
+    position: relative;
 
     @if $overlap {
       margin-left: -($size / 3);
+
+      // Default stacking order
+      z-index: 2;
+
+      // Put the last avatar behind the previous one
+      &:last-child {
+        z-index: 1;
+      }
+
       &:first-child {
         margin-left: 0;
       }
     } @else {
       margin-left: 0.25rem;
+
       &:first-child {
         margin-left: 0;
       }
